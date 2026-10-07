@@ -1,0 +1,64 @@
+<!-- EXX CRONOMETRO 0810 START -->
+<a id="exxcd-bar" class="exxcd" href="https://exxnutrition.com.br/produtos/kit-queima-de-gordura-e-retencao1/" aria-label="A promocao acaba em breve, aproveite">
+  <span class="exxcd-grp">
+    <svg class="exxcd-clock" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="#fff" stroke-width="2"></circle><path d="M12 9.3V13l2.6 1.7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><path d="M9 2.5h6" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+    <span class="exxcd-today">S&oacute; hoje</span>
+    <span class="exxcd-date">08/10</span>
+  </span>
+  <span class="exxcd-div"></span>
+  <span class="exxcd-grp">
+    <span class="exxcd-label">A promo&ccedil;&atilde;o acaba em</span>
+    <span class="exxcd-cd"><b id="exxcd-h">00</b><span class="exxcd-sep">:</span><b id="exxcd-m">00</b><span class="exxcd-sep">:</span><b id="exxcd-s">00</b></span>
+  </span>
+</a>
+<style>
+#exxcd-bar{display:none;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;padding:11px 24px;color:#fff;background:linear-gradient(90deg,#78082f 0%,#a30b52 50%,#78082f 100%);border-bottom:1px solid rgba(0,0,0,.18);text-decoration:none;line-height:1;font-family:inherit}
+#exxcd-bar.exxcd-on{display:flex}
+.exxcd-grp{display:flex;align-items:center;gap:10px}
+.exxcd-div{width:1px;height:26px;background:rgba(255,255,255,.22)}
+.exxcd-clock{flex:0 0 auto;opacity:.95}
+.exxcd-today{font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:13px}
+.exxcd-date{background:#fff;color:#a30b52;font-weight:800;font-size:13px;padding:3px 11px;border-radius:999px;letter-spacing:.02em}
+.exxcd-label{font-weight:600;font-size:13.5px;opacity:.92}
+.exxcd-cd{display:flex;align-items:center;gap:7px;font-variant-numeric:tabular-nums}
+.exxcd-cd b{min-width:42px;text-align:center;padding:7px 8px;border-radius:10px;font-size:20px;font-weight:800;display:inline-block;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.exxcd-sep{font-size:17px;font-weight:800;opacity:.6}
+@media(max-width:640px){ #exxcd-bar{gap:12px 16px;padding:10px 14px} .exxcd-div{display:none} .exxcd-cd b{min-width:36px;font-size:18px;padding:6px} }
+</style>
+<script>
+(function(){
+  var bar=document.getElementById('exxcd-bar');
+  if(!bar){return;}
+  var START=Date.UTC(2026,9,8,3,0,0);
+  var END=Date.UTC(2026,9,9,3,0,0);
+  function p(n){return (n<10?'0':'')+n;}
+  var H=document.getElementById('exxcd-h'),M=document.getElementById('exxcd-m'),S=document.getElementById('exxcd-s');
+  function syncHeader(){
+    var h=bar.offsetHeight||0;
+    var atTop=(window.pageYOffset||document.documentElement.scrollTop||0)<=h+2;
+    var push=bar.classList.contains('exxcd-on')&&atTop;
+    var list=document.querySelectorAll('.js-desktop-head-container,.js-mobile-head-container,[class*="head-container"]');
+    for(var i=0;i<list.length;i++){
+      var e=list[i],pos=getComputedStyle(e).position;
+      if(push&&(pos==='absolute'||pos==='fixed')){e.style.setProperty('margin-top',h+'px','important');e.setAttribute('data-exxcd-pushed','1');}
+      else if(e.getAttribute('data-exxcd-pushed')){e.style.removeProperty('margin-top');e.removeAttribute('data-exxcd-pushed');}
+    }
+  }
+  function tick(){
+    var now=Date.now();
+    if(now<START||now>=END){bar.classList.remove('exxcd-on');syncHeader();return;}
+    bar.classList.add('exxcd-on');
+    var d=END-now;
+    if(H){H.textContent=p(Math.floor(d/3600000));}
+    if(M){M.textContent=p(Math.floor(d%3600000/60000));}
+    if(S){S.textContent=p(Math.floor(d%60000/1000));}
+    syncHeader();
+  }
+  tick();
+  setInterval(tick,1000);
+  window.addEventListener('scroll',syncHeader,{passive:true});
+  window.addEventListener('resize',syncHeader);
+  window.addEventListener('load',function(){syncHeader();setTimeout(syncHeader,300);setTimeout(syncHeader,1200);});
+})();
+</script>
+<!-- EXX CRONOMETRO 0810 END -->
