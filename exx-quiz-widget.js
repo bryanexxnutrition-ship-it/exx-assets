@@ -71,13 +71,13 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
       var r=wa.getBoundingClientRect();
       if(!r.width || !r.height) return;
       var FB=58; // tamanho do nosso botao
-      var vw=document.documentElement.clientWidth;             // largura SEM a barra de rolagem
-      var vh=document.documentElement.clientHeight;
-      var cx=r.left + r.width/2;                               // centro X do WhatsApp (pixels reais)
-      var fr=Math.max(8, Math.round(vw - (cx + FB/2)));        // centraliza sobre o WhatsApp
-      var fb=Math.round(vh - (r.top - 12));                    // 12px acima do topo do WhatsApp
-      btn.style.right=fr+'px'; btn.style.bottom=fb+'px';
-      bubble.style.right=fr+'px'; bubble.style.bottom=(fb+FB+10)+'px';
+      var cx=r.left + r.width/2;                               // centro X do WhatsApp (coords do viewport)
+      var bx=Math.round(cx - FB/2);                            // left do nosso botao (centraliza)
+      var bt=Math.round(r.top - 12 - FB);                      // top do botao (base 12px acima do WA)
+      btn.style.left=bx+'px'; btn.style.top=bt+'px'; btn.style.right='auto'; btn.style.bottom='auto';
+      var bw=bubble.offsetWidth||300, bh=bubble.offsetHeight||170;
+      var blx=Math.round(cx + FB/2 - bw); if(blx<8) blx=8;     // balao com a borda direita alinhada ao botao
+      bubble.style.left=blx+'px'; bubble.style.top=Math.round(bt - bh - 10)+'px'; bubble.style.right='auto'; bubble.style.bottom='auto';
     }
     colar();
     var _t=0, _iv=setInterval(function(){ colar(); if(++_t>16) clearInterval(_iv); }, 400);
