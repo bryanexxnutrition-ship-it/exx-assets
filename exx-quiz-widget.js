@@ -61,6 +61,28 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
       try{ document.documentElement.style.overflow=''; }catch(e){}
       setTimeout(function(){ if(ov) ov.style.display='none'; }, 250);
     }
+
+    // Ancora o nosso icone LOGO ACIMA do botao do WhatsApp (ele pode carregar
+    // depois e mudar de altura). Se nao achar o WhatsApp, fica na posicao
+    // padrao do CSS.
+    function colar(){
+      var wa=document.querySelector('.btn-whatsapp, .js-btn-fixed-bottom.btn-whatsapp, a[href*="wa.me"], a[href*="api.whatsapp"]');
+      if(!wa) return;
+      var r=wa.getBoundingClientRect();
+      if(!r.width || !r.height) return;
+      var FB=58; // tamanho do nosso botao
+      var wb=Math.max(0, Math.round(window.innerHeight - r.bottom));
+      var wr=Math.max(0, Math.round(window.innerWidth - r.right));
+      var fr=Math.max(8, wr - Math.round((FB - r.width)/2)); // centraliza sobre o WhatsApp
+      var fb=wb + Math.round(r.height) + 12;                  // 12px acima do WhatsApp
+      btn.style.right=fr+'px'; btn.style.bottom=fb+'px';
+      bubble.style.right=fr+'px'; bubble.style.bottom=(fb+FB+10)+'px';
+    }
+    colar();
+    var _t=0, _iv=setInterval(function(){ colar(); if(++_t>16) clearInterval(_iv); }, 400);
+    window.addEventListener('resize', colar);
+    window.addEventListener('scroll', colar, {passive:true});
+    window.addEventListener('load', function(){ colar(); setTimeout(colar,600); setTimeout(colar,1500); });
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', boot); } else { boot(); }
 
