@@ -72,12 +72,18 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
       if(!r.width || !r.height) return;
       var FB=58; // tamanho do nosso botao
       var cx=r.left + r.width/2;                               // centro X do WhatsApp (coords do viewport)
-      var bx=Math.round(cx - FB/2);                            // left do nosso botao (centraliza)
-      var bt=Math.round(r.top - 12 - FB);                      // top do botao (base 12px acima do WA)
-      btn.style.left=bx+'px'; btn.style.top=bt+'px'; btn.style.right='auto'; btn.style.bottom='auto';
+      var tTop=r.top - 12 - FB;                                // top alvo (base 12px acima do WA)
+      btn.style.right='auto'; btn.style.bottom='auto';
+      btn.style.left=Math.round(cx - FB/2)+'px'; btn.style.top=Math.round(tTop)+'px';
+      // autocorrige o deslocamento de um ancestral com transform (gotcha do tema)
+      var rb=btn.getBoundingClientRect();
+      var L=Math.round((cx - FB/2) + (cx - (rb.left + rb.width/2)));
+      var T=Math.round(tTop + (tTop - rb.top));
+      btn.style.left=L+'px'; btn.style.top=T+'px';
       var bw=bubble.offsetWidth||300, bh=bubble.offsetHeight||170;
-      var blx=Math.round(cx + FB/2 - bw); if(blx<8) blx=8;     // balao com a borda direita alinhada ao botao
-      bubble.style.left=blx+'px'; bubble.style.top=Math.round(bt - bh - 10)+'px'; bubble.style.right='auto'; bubble.style.bottom='auto';
+      bubble.style.right='auto'; bubble.style.bottom='auto';
+      bubble.style.left=Math.round(L + FB - bw)+'px';          // borda direita do balao alinhada ao botao
+      bubble.style.top=Math.round(T - bh - 10)+'px';
     }
     colar();
     var _t=0, _iv=setInterval(function(){ colar(); if(++_t>16) clearInterval(_iv); }, 400);
