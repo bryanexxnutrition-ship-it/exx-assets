@@ -71,10 +71,9 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
       var r=wa.getBoundingClientRect();
       if(!r.width || !r.height) return;
       var FB=58; // tamanho do nosso botao
-      var wb=Math.max(0, Math.round(window.innerHeight - r.bottom));
-      var wr=Math.max(0, Math.round(window.innerWidth - r.right));
-      var fr=Math.max(8, wr - Math.round((FB - r.width)/2)); // centraliza sobre o WhatsApp
-      var fb=wb + Math.round(r.height) + 12;                  // 12px acima do WhatsApp
+      var cx=r.left + r.width/2;                               // centro X do WhatsApp (pixels reais)
+      var fr=Math.max(8, Math.round(window.innerWidth - (cx + FB/2)));   // centraliza sobre o WhatsApp
+      var fb=Math.round(window.innerHeight - (r.top - 12));    // 12px acima do topo do WhatsApp
       btn.style.right=fr+'px'; btn.style.bottom=fb+'px';
       bubble.style.right=fr+'px'; bubble.style.bottom=(fb+FB+10)+'px';
     }
