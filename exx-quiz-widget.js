@@ -13,7 +13,7 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
     // host isolado (shadow) p/ botao + balao
     var host=document.createElement('div');
     host.id='exx-quiz-host';
-    host.style.cssText='position:fixed;z-index:2147483000;right:0;bottom:0;width:0;height:0;';
+    host.style.cssText='position:fixed;z-index:2147483000;right:0;bottom:0;width:0;height:0;display:none;';
     document.body.appendChild(host);
     var sh=host.attachShadow({mode:'open'});
     sh.innerHTML='<style>'+CSS+'</style>'+BTN;
@@ -25,7 +25,6 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
 
     var fechado=false;
     try{ fechado = sessionStorage.getItem('exxq_bubble_closed')==='1'; }catch(e){}
-    if(!fechado) setTimeout(function(){ bubble.classList.add('on'); }, 1500);
 
     btn.addEventListener('click', function(){ bubble.classList.toggle('on'); });
     bclose.addEventListener('click', function(e){ e.stopPropagation(); bubble.classList.remove('on'); try{sessionStorage.setItem('exxq_bubble_closed','1');}catch(e){} });
@@ -85,11 +84,35 @@ var QUIZ_HTML="<!doctype html><html lang=\"pt-br\"><head><meta charset=\"utf-8\"
       bubble.style.left=Math.round(L + FB - bw)+'px';          // borda direita do balao alinhada ao botao
       bubble.style.top=Math.round(T - bh - 10)+'px';
     }
-    colar();
-    var _t=0, _iv=setInterval(function(){ colar(); if(++_t>16) clearInterval(_iv); }, 400);
-    window.addEventListener('resize', colar);
-    window.addEventListener('scroll', colar, {passive:true});
-    window.addEventListener('load', function(){ colar(); setTimeout(colar,600); setTimeout(colar,1500); });
+    function revelar(){
+      host.style.display='';
+      if(!fechado) setTimeout(function(){ bubble.classList.add('on'); colar(); }, 1500);
+      colar();
+      var _t=0, _iv=setInterval(function(){ colar(); if(++_t>16) clearInterval(_iv); }, 400);
+      window.addEventListener('resize', colar);
+      window.addEventListener('scroll', colar, {passive:true});
+      window.addEventListener('load', function(){ colar(); setTimeout(colar,600); setTimeout(colar,1500); });
+    }
+
+    // PRIORIDADE DO POP-UP (raspadinha): o quiz fica escondido enquanto o popup
+    // (.exxpop-ov) estiver na tela, e so aparece quando a pessoa FECHA ou
+    // CONCLUI o popup (ele some do DOM). Se o popup ja foi resolvido, espera
+    // pouco; se ainda pode aparecer, da um tempo maior pra ele surgir primeiro.
+    function popupNaTela(){ try{ return !!document.querySelector('.exxpop-ov'); }catch(e){ return false; } }
+    function popupResolvido(){
+      try{
+        var v=null; try{ v=localStorage.getItem('exx_pop_v1'); }catch(e){}
+        if(!v){ var m=document.cookie.match(/(?:^|; )exx_pop_v1=([^;]*)/); v=m?decodeURIComponent(m[1]):null; }
+        if(!v) return false; var o=JSON.parse(v); return !!(o && (o.s==='done' || o.s==='closed'));
+      }catch(e){ return false; }
+    }
+    var revelado=false, viuPopup=false, t0=Date.now(), graca=popupResolvido()?2500:10000;
+    var _gate=setInterval(function(){
+      if(popupNaTela()){ viuPopup=true; return; }           // popup aberto: espera
+      if(viuPopup || (Date.now()-t0)>graca){                 // popup fechou, ou nao veio na graca
+        clearInterval(_gate); if(!revelado){ revelado=true; revelar(); }
+      }
+    }, 300);
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', boot); } else { boot(); }
 
