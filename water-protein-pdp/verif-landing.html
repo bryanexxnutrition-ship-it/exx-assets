@@ -1,0 +1,209 @@
+<!doctype html><html class="exxw-on" lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Verif landing</title><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style id="exx-water-mn">
+/* escopo: html.exxw-on (o JS liga) + a descrição movida .exxw-landing */
+html.exxw-on{--exxw-y:#F1E529;--exxw-k:#141414;--exxw-mut:#5d5d5d;--exxw-line:#e6e6e6;--exxw-soft:#F5F5F3;--exxw-pink:#ff2e6e;--exxw-ff:"Archivo",Arial,Helvetica,sans-serif}
+html.exxw-on #single-product,html.exxw-on .exxw{font-family:var(--exxw-ff)}
+
+/* ---------- TOPO NATIVO (retoque; preço/variação/carrinho seguem nativos) ---------- */
+html.exxw-on #product-name{font-weight:900;text-transform:uppercase;letter-spacing:-.015em;line-height:1;font-size:clamp(28px,3.2vw,40px)}
+html.exxw-on .js-price-container .product-price,html.exxw-on #price_display{font-weight:900;white-space:nowrap}
+html.exxw-on .js-compare-price-display{font-weight:600}
+html.exxw-on .product-buy-btn.js-addtocart{border-radius:12px !important;text-transform:uppercase;font-weight:800 !important;letter-spacing:.04em;padding-top:16px !important;padding-bottom:16px !important}
+html.exxw-on .product-featured-image img,html.exxw-on .js-product-slide img{border-radius:16px}
+html.exxw-on .js-swiper-product-thumbnails .thumbnail-image{border-radius:10px}
+/* seletor de sabor com ícone de abacaxi */
+html.exxw-on .js-product-variants .variant-label{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+html.exxw-on .js-product-variants .variant-label::before{content:"";width:22px;height:22px;flex:none;background:url(https://cdn.jsdelivr.net/gh/bryanexxnutrition-ship-it/exx-assets@6fad0e4cbe7a7830118b17c5589360e7e913f02b/water-protein-pdp/abacaxi.png) center/contain no-repeat}
+
+/* ---------- SHORT (frase curta) ---------- */
+html.exxw-on .exxw-short{font-size:16px;color:var(--exxw-mut);font-weight:500;margin:4px 0 2px}
+
+/* ---------- LANDING full-width ---------- */
+html.exxw-on .exxw-landing{float:none !important;width:100% !important;max-width:none !important;margin:28px 0 0 !important;padding:0 !important;clear:both}
+html.exxw-on .exxw{color:var(--exxw-k);line-height:1.55}
+html.exxw-on .exxw *{box-sizing:border-box}
+html.exxw-on .exxw img{display:block;max-width:100%}
+html.exxw-on .exxw .exxw-wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+html.exxw-on .exxw .exxw-sec{padding:64px 0}
+html.exxw-on .exxw .exxw-soft{background:var(--exxw-soft)}
+html.exxw-on .exxw .exxw-center{text-align:center}
+html.exxw-on .exxw .exxw-h2{font-weight:900;text-transform:uppercase;line-height:.98;letter-spacing:-.015em;font-size:clamp(30px,5vw,52px);margin:0}
+html.exxw-on .exxw .exxw-eye{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--exxw-mut);margin:0 0 10px}
+html.exxw-on .exxw .exxw-eye-dark{color:#3a3a1a}
+html.exxw-on .exxw .exxw-lead{font-size:17px;color:var(--exxw-mut);font-weight:400;max-width:48ch;margin:12px 0 0}
+html.exxw-on .exxw .exxw-center .exxw-lead{margin-left:auto;margin-right:auto}
+html.exxw-on .exxw .exxw-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--exxw-k);color:#fff;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:15px;padding:16px 30px;border-radius:12px;text-decoration:none;margin-top:22px}
+/* marquee */
+html.exxw-on .exxw .exxw-marq{background:var(--exxw-k);color:#fff;overflow:hidden;white-space:nowrap}
+html.exxw-on .exxw .exxw-marq-t{display:inline-block;padding:16px 0;animation:exxwmv 26s linear infinite;font-weight:900;font-size:clamp(20px,3vw,32px);text-transform:uppercase;letter-spacing:-.01em}
+html.exxw-on .exxw .exxw-marq-t span{padding:0 10px}
+html.exxw-on .exxw .exxw-marq-t i{color:var(--exxw-y);font-style:normal;padding:0 6px}
+@keyframes exxwmv{to{transform:translateX(-50%)}}
+/* split */
+html.exxw-on .exxw .exxw-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+html.exxw-on .exxw .exxw-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+html.exxw-on .exxw .exxw-card{background:#fff;border:1.5px solid var(--exxw-k);border-radius:16px;box-shadow:5px 6px 0 var(--exxw-k);padding:20px}
+html.exxw-on .exxw .exxw-icn{width:46px;height:46px;border-radius:50%;background-color:var(--exxw-k);background-position:center;background-repeat:no-repeat;background-size:22px}
+html.exxw-on .exxw .exxw-icn-drop{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203s6%206.5%206%2011a6%206%200%200%201-12%200c0-4.5%206-11%206-11z%22%2F%3E%3C%2Fsvg%3E")}
+html.exxw-on .exxw .exxw-icn-dumbbell{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6.5%207v10M3.5%209v6M17.5%207v10M20.5%209v6M6.5%2012h11%22%2F%3E%3C%2Fsvg%3E")}
+html.exxw-on .exxw .exxw-icn-bolt{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M13%202%204%2014h6l-1%208%209-12h-6z%22%2F%3E%3C%2Fsvg%3E")}
+html.exxw-on .exxw .exxw-icn-leaf{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020c10%202%2016-5%2016-16C10%202%204%2011%204%2020z%22%2F%3E%3Cpath%20d%3D%22M4%2020c4-7%208-9%2012-10%22%2F%3E%3C%2Fsvg%3E")}
+html.exxw-on .exxw .exxw-card h3{font-size:19px;margin:14px 0 6px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+html.exxw-on .exxw .exxw-card p{font-size:14px;color:var(--exxw-mut);font-weight:400;margin:0}
+html.exxw-on .exxw .exxw-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}
+/* ingredientes */
+html.exxw-on .exxw .exxw-ing{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px;text-align:left}
+html.exxw-on .exxw .exxw-ing>div{background:var(--exxw-k);color:#fff;border-radius:16px;padding:22px}
+html.exxw-on .exxw .exxw-ing b{font-weight:900;font-size:38px;line-height:1;color:var(--exxw-y);display:block}
+html.exxw-on .exxw .exxw-ing h3{font-size:18px;margin:10px 0 6px;text-transform:uppercase}
+html.exxw-on .exxw .exxw-ing p{font-size:13px;color:#cfcfcf;font-weight:400;margin:0}
+html.exxw-on .exxw .exxw-free{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+html.exxw-on .exxw .exxw-free span{border:1.5px solid var(--exxw-k);border-radius:99px;padding:8px 16px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+/* comparativo */
+html.exxw-on .exxw .exxw-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+html.exxw-on .exxw .exxw-cmp{margin:34px auto 0;max-width:860px;min-width:300px;border-collapse:separate;border-spacing:0;width:100%;font-size:15px}
+html.exxw-on .exxw .exxw-cmp th,html.exxw-on .exxw .exxw-cmp td{padding:15px 12px;border-bottom:1px solid var(--exxw-line);text-align:center;font-weight:500}
+html.exxw-on .exxw .exxw-cmp td:first-child,html.exxw-on .exxw .exxw-cmp th:first-child{text-align:left;font-weight:800}
+html.exxw-on .exxw .exxw-cmp thead th{font-weight:900;font-size:19px;text-transform:uppercase;border-bottom:0}
+html.exxw-on .exxw .exxw-cmp .exxw-us{background:var(--exxw-y);font-weight:800}
+html.exxw-on .exxw .exxw-cmp thead .exxw-us{border-radius:12px 12px 0 0}
+html.exxw-on .exxw .exxw-cmp tbody tr:last-child .exxw-us{border-radius:0 0 12px 12px;border-bottom:0}
+html.exxw-on .exxw .exxw-cmp td:last-child{color:var(--exxw-mut)}
+/* passos */
+html.exxw-on .exxw .exxw-steps{display:grid;gap:10px;margin-top:24px}
+html.exxw-on .exxw .exxw-step{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--exxw-k);border-radius:16px;box-shadow:5px 6px 0 var(--exxw-k);padding:16px 18px}
+html.exxw-on .exxw .exxw-step b{font-weight:900;font-size:34px;line-height:1;color:var(--exxw-k)}
+html.exxw-on .exxw .exxw-step h3{font-size:18px;text-transform:uppercase;margin:0}
+html.exxw-on .exxw .exxw-step p{font-size:14px;color:var(--exxw-mut);font-weight:400;margin:2px 0 0}
+/* faq */
+html.exxw-on .exxw .exxw-faq{max-width:780px;margin:30px auto 0;text-align:left}
+html.exxw-on .exxw .exxw-faq details{border:1.5px solid var(--exxw-k);border-radius:14px;margin-top:10px;background:#fff}
+html.exxw-on .exxw .exxw-faq summary{list-style:none;cursor:pointer;padding:15px 18px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+html.exxw-on .exxw .exxw-faq summary::-webkit-details-marker{display:none}
+html.exxw-on .exxw .exxw-faq summary::after{content:"";width:8px;height:8px;border-right:2px solid;border-bottom:2px solid;transform:rotate(45deg)}
+html.exxw-on .exxw .exxw-faq details[open] summary::after{transform:rotate(-135deg)}
+html.exxw-on .exxw .exxw-faq p{padding:0 18px 15px;color:var(--exxw-mut);font-size:15px;font-weight:400;margin:0}
+/* final */
+html.exxw-on .exxw .exxw-final{background:var(--exxw-y);border-radius:20px;display:grid;grid-template-columns:1.5fr 1fr;overflow:hidden;align-items:center}
+html.exxw-on .exxw .exxw-final>div{padding:46px}
+html.exxw-on .exxw .exxw-final img{width:100%;aspect-ratio:4/5;object-fit:cover}
+html.exxw-on .exxw .exxw-final .exxw-lead{color:#3a3a1a}
+html.exxw-on .exxw .exxw-legal{font-size:12.5px;color:var(--exxw-mut);text-align:center;padding:22px 20px 40px;max-width:820px;margin:0 auto;font-weight:400}
+/* mobile */
+@media(max-width:900px){
+  html.exxw-on .exxw .exxw-sec{padding:44px 0}
+  html.exxw-on .exxw .exxw-split,html.exxw-on .exxw .exxw-final{grid-template-columns:1fr;gap:24px}
+  html.exxw-on .exxw .exxw-ing{grid-template-columns:1fr 1fr}
+  html.exxw-on .exxw .exxw-media-first{order:-1}
+  html.exxw-on .exxw .exxw-cmp{font-size:13px}
+  html.exxw-on .exxw .exxw-cmp th,html.exxw-on .exxw .exxw-cmp td{padding:12px 8px}
+  html.exxw-on .exxw .exxw-cmp thead th{font-size:16px}
+}
+@media(max-width:480px){html.exxw-on .exxw .exxw-cards{grid-template-columns:1fr}html.exxw-on .exxw .exxw-ing{grid-template-columns:1fr}}
+</style></head><body style="margin:0;background:#fff"><div class="exxw-landing" style="width:100%"><div class="exxw">
+
+  <!-- faixa rolante -->
+  <div class="exxw-marq"><div class="exxw-marq-t">
+    <span>23 g de prote&iacute;na</span><i>&#9670;</i><span>Zero a&ccedil;&uacute;car</span><i>&#9670;</i><span>Zero carbo</span><i>&#9670;</i><span>4,3 g de BCAA</span><i>&#9670;</i><span>Eletr&oacute;litos + Vit C</span><i>&#9670;</i><span>Zero lactose</span><i>&#9670;</i><span>Sem gl&uacute;ten</span><i>&#9670;</i>
+    <span>23 g de prote&iacute;na</span><i>&#9670;</i><span>Zero a&ccedil;&uacute;car</span><i>&#9670;</i><span>Zero carbo</span><i>&#9670;</i><span>4,3 g de BCAA</span><i>&#9670;</i><span>Eletr&oacute;litos + Vit C</span><i>&#9670;</i><span>Zero lactose</span><i>&#9670;</i><span>Sem gl&uacute;ten</span><i>&#9670;</i>
+  </div></div>
+
+  <!-- benefícios -->
+  <section class="exxw-sec exxw-soft">
+    <div class="exxw-wrap exxw-split">
+      <div>
+        <h2 class="exxw-h2">Prote&iacute;na que parece suco.</h2>
+        <p class="exxw-lead">Mistura com &aacute;gua gelada e fica leve e refrescante, sem a textura pesada de um shake.</p>
+        <div class="exxw-cards">
+          <div class="exxw-card"><span class="exxw-icn exxw-icn-drop"></span><h3>Leve e refrescante</h3><p>Dissolve em &aacute;gua gelada e bebe como suco. Nada de leitoso.</p></div>
+          <div class="exxw-card"><span class="exxw-icn exxw-icn-dumbbell"></span><h3>23 g de prote&iacute;na</h3><p>Col&aacute;geno hidrolisado + 4,3 g de BCAA por dose.</p></div>
+          <div class="exxw-card"><span class="exxw-icn exxw-icn-bolt"></span><h3>3 em 1</h3><p>Prote&iacute;na, BCAA e eletr&oacute;litos, mais vitamina C.</p></div>
+          <div class="exxw-card"><span class="exxw-icn exxw-icn-leaf"></span><h3>Zero que pesa</h3><p>Zero a&ccedil;&uacute;car, carbo, lactose e sem gl&uacute;ten.</p></div>
+        </div>
+      </div>
+      <div class="exxw-media"><img src="https://cdn.jsdelivr.net/gh/bryanexxnutrition-ship-it/exx-assets@aff2e9771af23447e23b16a68de6ca9a46e92443/water-protein-pdp/studio.webp" alt="Modelo com o Water Protein" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- o que vai em cada dose -->
+  <section class="exxw-sec">
+    <div class="exxw-wrap exxw-center">
+      <p class="exxw-eye">F&oacute;rmula</p>
+      <h2 class="exxw-h2">O que vai em cada dose</h2>
+      <p class="exxw-lead">Quatro pilares numa dose de 30 g.</p>
+      <div class="exxw-ing">
+        <div><b>23 g</b><h3>Prote&iacute;na</h3><p>Col&aacute;geno hidrolisado. 46% do VD.</p></div>
+        <div><b>4,3 g</b><h3>BCAA</h3><p>L-leucina, L-valina e L-isoleucina.</p></div>
+        <div><b>Na&middot;K&middot;Mg</b><h3>Eletr&oacute;litos</h3><p>S&oacute;dio 160, pot&aacute;ssio 77, magn&eacute;sio 63 mg.</p></div>
+        <div><b>80 mg</b><h3>Vitamina C</h3><p>80% do VD por dose.</p></div>
+      </div>
+      <div class="exxw-free"><span>Zero a&ccedil;&uacute;car</span><span>Zero carbo</span><span>Zero lactose</span><span>Sem gl&uacute;ten</span><span>25 doses</span></div>
+    </div>
+  </section>
+
+  <!-- comparativo -->
+  <section class="exxw-sec exxw-soft">
+    <div class="exxw-wrap exxw-center">
+      <p class="exxw-eye">Compare</p>
+      <h2 class="exxw-h2">Suco ou shake?</h2>
+      <p class="exxw-lead">Mesma meta de prote&iacute;na, de um jeito bem mais leve.</p>
+      <div class="exxw-tablewrap"><table class="exxw-cmp">
+        <thead><tr><th></th><th class="exxw-us">Water Protein</th><th>Shake tradicional</th></tr></thead>
+        <tbody>
+          <tr><td>Textura</td><td class="exxw-us">Leve, tipo suco</td><td>Cremosa, milkshake</td></tr>
+          <tr><td>Mistura com</td><td class="exxw-us">&Aacute;gua gelada</td><td>&Aacute;gua ou leite</td></tr>
+          <tr><td>Lactose</td><td class="exxw-us">Zero</td><td>Costuma ter</td></tr>
+          <tr><td>Eletr&oacute;litos + Vit C</td><td class="exxw-us">Sim</td><td>Normalmente n&atilde;o</td></tr>
+          <tr><td>Combina com</td><td class="exxw-us">Treino, calor, dia a dia</td><td>P&oacute;s-treino</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- modo de uso -->
+  <section class="exxw-sec">
+    <div class="exxw-wrap exxw-split">
+      <div class="exxw-media exxw-media-first"><img src="https://cdn.jsdelivr.net/gh/bryanexxnutrition-ship-it/exx-assets@9bfb788b04e1d426899ce34f6920a76a995779d6/water-protein-pdp/uso.webp" alt="Modo de uso do Water Protein" loading="lazy"></div>
+      <div>
+        <p class="exxw-eye">Modo de uso</p>
+        <h2 class="exxw-h2">Dosou. Misturou. Bebeu.</h2>
+        <p class="exxw-lead">Dois dosadores e &aacute;gua gelada. S&oacute; isso.</p>
+        <div class="exxw-steps">
+          <div class="exxw-step"><b>01</b><div><h3>2 dosadores</h3><p>Uma dose s&atilde;o 30 g.</p></div></div>
+          <div class="exxw-step"><b>02</b><div><h3>&Aacute;gua gelada</h3><p>400 ml, ou a bebida que preferir.</p></div></div>
+          <div class="exxw-step"><b>03</b><div><h3>Misture</h3><p>At&eacute; dissolver por completo.</p></div></div>
+          <div class="exxw-step"><b>04</b><div><h3>Aproveite</h3><p>Com gelo fica melhor ainda.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="exxw-sec exxw-soft">
+    <div class="exxw-wrap exxw-center">
+      <h2 class="exxw-h2">D&uacute;vidas</h2>
+      <div class="exxw-faq">
+        <details><summary>&Eacute; prote&iacute;na de verdade?</summary><p>Sim. 23 g por dose (col&aacute;geno hidrolisado) + 4,3 g de BCAA, numa bebida leve que mistura na &aacute;gua.</p></details>
+        <details><summary>Tem lactose, a&ccedil;&uacute;car ou gl&uacute;ten?</summary><p>Zero lactose, zero a&ccedil;&uacute;car, zero carbo e sem gl&uacute;ten. 92 kcal por dose. Cont&eacute;m derivados de bovino.</p></details>
+        <details><summary>Quanto rende a embalagem?</summary><p>750 g rendem 25 doses de 30 g.</p></details>
+        <details><summary>Como preparar e quando tomar?</summary><p>2 dosadores (30 g) em 400 ml de &aacute;gua gelada; misture at&eacute; dissolver. Pode tomar a qualquer hora do dia.</p></details>
+        <details><summary>&Eacute; um medicamento?</summary><p>N&atilde;o. &Eacute; um suplemento alimentar e n&atilde;o substitui uma alimenta&ccedil;&atilde;o equilibrada.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- banner final -->
+  <section class="exxw-sec">
+    <div class="exxw-wrap"><div class="exxw-final">
+      <div>
+        <p class="exxw-eye exxw-eye-dark">Sabor abacaxi &middot; 25 doses</p>
+        <h2 class="exxw-h2">Leve, refrescante, parece suco.</h2>
+        <p class="exxw-lead">23 g de prote&iacute;na por dose, zero a&ccedil;&uacute;car e zero lactose.</p>
+        <a class="exxw-btn" href="#single-product">Comprar Water Protein</a>
+      </div>
+      <img src="https://cdn.jsdelivr.net/gh/bryanexxnutrition-ship-it/exx-assets@e791b795ef13c9cce0056b345d9c8f8118840bbf/water-protein-pdp/banner.webp" alt="Water Protein gelado" loading="lazy">
+    </div></div>
+  </section>
+
+  <p class="exxw-legal">Produto recomendado para adultos (&ge; 19 anos). N&atilde;o &eacute; um medicamento. Cont&eacute;m ingredientes derivados de bovino. N&atilde;o cont&eacute;m gl&uacute;ten. Imagens meramente ilustrativas.</p>
+
+</div></div></body></html>
