@@ -1,0 +1,63 @@
+<a id="exx-ultra-tb" class="exx-ultra-tb" href="https://exxnutrition.com.br/produtos/ultra-protein-whey-420g-exx-nutrition-1tw3l/" style="display:none" role="status" aria-live="off">
+  <span class="exx-ultra-tb-ico" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.2v5l3.4 2"></path></svg>
+  </span>
+  <span class="exx-ultra-tb-txt"><b class="exx-ultra-tb-brand">MEGA BLACK</b> <span class="exx-ultra-tb-hl">COMPRE 2 LEVE 3</span> no Ultra Protein 420g , SÓ HOJE, acaba em <b id="exx-ultra-tb-time" class="exx-ultra-tb-clock">00:00:00</b></span>
+</a>
+<style>
+  #exx-ultra-tb.exx-ultra-tb{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    position:fixed; top:0; left:0; right:0; z-index:1100;
+    box-sizing:border-box; margin:0; padding:10px 14px;
+    background:#0a0a0a; color:#fff; text-decoration:none;
+    font-family:inherit; font-size:15px; font-weight:600; line-height:1.2;
+    text-align:center; letter-spacing:.2px;
+    border-bottom:2px solid #e10600;
+  }
+  #exx-ultra-tb .exx-ultra-tb-ico{display:inline-flex; align-items:center; color:#e10600;}
+  #exx-ultra-tb .exx-ultra-tb-brand{font-weight:900; letter-spacing:.5px;}
+  #exx-ultra-tb .exx-ultra-tb-hl{color:#ff2b2b; font-weight:900;}
+  #exx-ultra-tb .exx-ultra-tb-clock{font-variant-numeric:tabular-nums; font-weight:800; margin-left:2px; color:#fff;}
+  
+  html.exx-ultb-on #container{ padding-top:var(--exx-ultb-h,42px) !important; }
+  html.exx-ultb-on .js-promo-bar{ top:var(--exx-ultb-h,42px) !important; }
+  
+  @media(max-width:767px){
+    html.exx-ultb-on body.template-home [data-store="head"].head-fix{ display:none !important; }
+    html.exx-ultb-on body.template-home [data-store="head"]:not(.head-fix) .search-logo-cart-container{ padding-top:calc(var(--exx-ultb-h,42px) + 6px) !important; padding-bottom:10px !important; background:#000 !important; }
+    html.exx-ultb-on body.template-home .hero-video-section{ margin-top:78px !important; background:#000 !important; }
+  }
+  
+  html.exx-ultb-on .js-ajax-cart-panel{ padding-top:var(--exx-ultb-h,42px) !important; box-sizing:border-box !important; }
+  
+  @media(min-width:768px){ html.exx-ultb-on body.template-home .search-logo-cart-container{ padding-top:calc(var(--exx-ultb-h,42px) + 10px) !important; } }
+  @media(max-width:600px){
+    #exx-ultra-tb.exx-ultra-tb{font-size:12.5px; padding:8px 10px; gap:6px;}
+    #exx-ultra-tb .exx-ultra-tb-ico svg{width:14px;height:14px;}
+  }
+</style>
+<script>
+(function(){
+  var el=document.getElementById('exx-ultra-tb');
+  var t=document.getElementById('exx-ultra-tb-time');
+  if(!el||!t) return;
+  var START=new Date('2026-11-18T00:00:00-03:00').getTime();
+  var END  =new Date('2026-11-19T00:00:00-03:00').getTime();
+  var force=/[?&]ultra1811test=1\b/.test(location.search); // previa antes do dia
+  var root=document.documentElement;
+  function pad(n){return (n<10?'0':'')+n;}
+  function setOffset(){ var h=el.offsetHeight||42; root.style.setProperty('--exx-ultb-h', h+'px'); }
+  function tick(){
+    var now=Date.now();
+    var visible = force ? (now<END) : (now>=START && now<END);
+    if(!visible){ el.style.display='none'; root.classList.remove('exx-ultb-on'); return; }
+    el.style.display='flex';
+    root.classList.add('exx-ultb-on'); setOffset();
+    var s=Math.max(0,Math.floor((END-now)/1000));
+    var h=Math.floor(s/3600), m=Math.floor((s%3600)/60), sec=s%60;
+    t.textContent=pad(h)+':'+pad(m)+':'+pad(sec);
+  }
+  tick(); setInterval(tick,1000);
+  window.addEventListener('resize', function(){ if(root.classList.contains('exx-ultb-on')) setOffset(); });
+})();
+</script>

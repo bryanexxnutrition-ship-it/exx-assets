@@ -1,0 +1,43 @@
+<section id="exx-ultra-trilha" class="exx-ult-tr" hidden aria-label="Promoção Ultra Protein Compre 2 Leve 3">
+  <div class="exx-ult-tr-wrap">
+    <span class="exx-ult-tr-selo">MEGA BLACK EXX · SÓ HOJE, 18/11</span>
+    <h2 class="exx-ult-tr-h2">Compre 2, leve 3 , o 3º é grátis</h2>
+    <p class="exx-ult-tr-sub">No <b>Ultra Protein 420g</b> (WPC + Albumina): leve 3 potes pagando 2. 20g de proteína por dose e zero adição de açúcares. Só hoje.</p>
+    <div class="exx-ult-tr-sabores">
+      <span class="exx-ult-tr-sabor">Morango</span>
+      <span class="exx-ult-tr-sabor">Leite em Pó</span>
+      <span class="exx-ult-tr-sabor">Chocolate</span>
+    </div>
+    <a class="exx-ult-tr-btn" href="https://exxnutrition.com.br/produtos/ultra-protein-whey-420g-exx-nutrition-1tw3l/">Adquira agora</a>
+    <p class="exx-ult-tr-nota">Promoção válida só hoje, 18/11. Adicione 3 potes de Ultra Protein 420g ao carrinho e o 3º sai grátis.</p>
+  </div>
+</section>
+<style>
+  #exx-ultra-trilha.exx-ult-tr{ background:#0a0a0a; color:#fff; padding:48px 20px; margin-top:-20px; text-align:center; font-family:inherit; border-top:3px solid #e10600; border-bottom:3px solid #e10600; }
+  #exx-ultra-trilha .exx-ult-tr-wrap{ max-width:900px; margin:0 auto; }
+  #exx-ultra-trilha .exx-ult-tr-selo{ display:inline-block; background:#e10600; color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; padding:6px 14px; border-radius:999px; }
+  #exx-ultra-trilha .exx-ult-tr-h2{ font-size:clamp(26px,4vw,40px); font-weight:900; line-height:1.08; margin:16px 0 10px; text-transform:uppercase; }
+  #exx-ultra-trilha .exx-ult-tr-sub{ font-size:16px; color:#dcdcdc; margin:0 auto 20px; max-width:640px; line-height:1.5; font-weight:400; }
+  #exx-ultra-trilha .exx-ult-tr-sub b{ color:#fff; }
+  #exx-ultra-trilha .exx-ult-tr-sabores{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
+  #exx-ultra-trilha .exx-ult-tr-sabor{ border:1.5px solid #e10600; color:#fff; font-weight:700; font-size:14px; padding:8px 18px; border-radius:10px; }
+  #exx-ultra-trilha .exx-ult-tr-btn{ display:inline-block; background:#e10600; color:#fff; font-weight:900; text-transform:uppercase; letter-spacing:.04em; font-size:17px; text-decoration:none; padding:16px 44px; border-radius:12px; }
+  #exx-ultra-trilha .exx-ult-tr-btn:hover{ background:#ff1f1f; }
+  #exx-ultra-trilha .exx-ult-tr-nota{ font-size:12.5px; color:#9a9a9a; margin:18px auto 0; max-width:560px; line-height:1.5; }
+  @media(max-width:600px){ #exx-ultra-trilha.exx-ult-tr{ padding:36px 16px; } }
+</style>
+<script>
+(function(){
+  var sec=document.getElementById('exx-ultra-trilha');
+  if(!sec) return;
+  var START=new Date('2026-11-18T00:00:00-03:00').getTime();
+  var END  =new Date('2026-11-19T00:00:00-03:00').getTime();
+  var force=/[?&]ultra1811test=1\b/.test(location.search);
+  function upd(){
+    var now=Date.now();
+    var visible = force ? (now<END) : (now>=START && now<END);
+    if(visible){ sec.removeAttribute('hidden'); } else { sec.setAttribute('hidden',''); }
+  }
+  upd(); setInterval(upd,30000);
+})();
+</script>
