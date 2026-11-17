@@ -1,43 +1,83 @@
-<section id="exx-ultra-trilha" class="exx-ult-tr" hidden aria-label="Promoção Ultra Protein Compre 2 Leve 3">
-  <div class="exx-ult-tr-wrap">
-    <span class="exx-ult-tr-selo">MEGA BLACK EXX · SÓ HOJE, 18/11</span>
-    <h2 class="exx-ult-tr-h2">Compre 2, leve 3 , o 3º é grátis</h2>
-    <p class="exx-ult-tr-sub">No <b>Ultra Protein 420g</b> (WPC + Albumina): leve 3 potes pagando 2. 20g de proteína por dose e zero adição de açúcares. Só hoje.</p>
-    <div class="exx-ult-tr-sabores">
-      <span class="exx-ult-tr-sabor">Morango</span>
-      <span class="exx-ult-tr-sabor">Leite em Pó</span>
-      <span class="exx-ult-tr-sabor">Chocolate</span>
+<style id="exx-ut-tr-css">
+.exx-ut-tr{display:block;margin-top:-20px;background:#0a0a0a;background-image:radial-gradient(ellipse at 50% 0%,rgba(225,6,0,.26),rgba(0,0,0,0) 55%);color:#fff;padding:52px 16px 48px;box-sizing:border-box;font-family:inherit;overflow:hidden}
+.exx-ut-tr[hidden]{display:none}
+.exx-ut-tr-in{max-width:1140px;margin:0 auto}
+.exx-ut-tr-head{text-align:center;margin-bottom:34px}
+.exx-ut-tr-tag{display:inline-block;background:#e10600;color:#fff;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}
+.exx-ut-tr-head h2{font-size:42px;line-height:1.02;font-weight:900;margin:0 0 12px;letter-spacing:-.02em;text-transform:uppercase;color:#fff}
+.exx-ut-tr-head h2 em{font-style:normal;color:#ff2d23}
+.exx-ut-tr-head p{font-size:17px;line-height:1.45;color:#c9c9c9;margin:0 auto;max-width:640px}
+.exx-ut-tr-track{list-style:none;margin:30px auto 0;padding:0;display:flex;gap:18px;align-items:stretch;justify-content:center;max-width:620px}
+.exx-ut-tr-step{position:relative;flex:1;background:#171717;border:1px solid #2a2a2a;border-radius:20px;padding:30px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-sizing:border-box}
+.exx-ut-tr-step::after{content:"";position:absolute;right:-16px;top:50%;width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:12px solid #e10600;transform:translateY(-50%);z-index:2}
+.exx-ut-tr-step:last-child::after{display:none}
+.exx-ut-tr-num{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bdbdbd}
+.exx-ut-tr-big{font-size:68px;line-height:.9;font-weight:900;letter-spacing:-.04em;color:#fff}
+.exx-ut-tr-qty{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#bdbdbd}
+.exx-ut-tr-step--top{background:#e10600;border-color:#e10600;box-shadow:0 0 0 6px rgba(225,6,0,.22),0 20px 50px rgba(225,6,0,.35)}
+.exx-ut-tr-step--top .exx-ut-tr-num{color:rgba(255,255,255,.9)}
+.exx-ut-tr-step--top .exx-ut-tr-qty{color:rgba(255,255,255,.9)}
+.exx-ut-tr-foot{text-align:center;margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.exx-ut-tr-sabores{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.exx-ut-tr-sabor{border:1.5px solid #e10600;color:#fff;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:8px 18px;border-radius:999px}
+.exx-ut-tr-note{font-size:15px;color:#c9c9c9;margin:0;line-height:1.5}
+.exx-ut-tr-note b{color:#fff}
+.exx-ut-tr-cta{display:inline-block;background:#e10600;color:#fff !important;font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:17px 44px;border-radius:999px;text-decoration:none !important;transition:transform .15s,background .2s}
+.exx-ut-tr-cta:hover{background:#ff2d23;transform:translateY(-2px)}
+@media (max-width:767px){
+  .exx-ut-tr{padding:36px 14px 34px}
+  .exx-ut-tr-head{margin-bottom:24px}
+  .exx-ut-tr-head h2{font-size:28px}
+  .exx-ut-tr-head p{font-size:14px}
+  .exx-ut-tr-track{gap:22px;max-width:340px}
+  .exx-ut-tr-step{padding:22px 10px;border-radius:16px}
+  .exx-ut-tr-step::after{right:-17px;border-left-width:11px}
+  .exx-ut-tr-big{font-size:52px}
+  .exx-ut-tr-cta{width:100%;box-sizing:border-box}
+}
+</style>
+<section class="exx-ut-tr" id="exx-ultra-trilha" hidden aria-label="Promoção Ultra Protein Compre 2 Leve 3">
+  <div class="exx-ut-tr-in">
+    <div class="exx-ut-tr-head">
+      <span class="exx-ut-tr-tag">Mega Black Exx · Só hoje, 18/11</span>
+      <h2>Compre 2, <em>leve 3</em></h2>
+      <p>No Ultra Protein 420g (WPC + Albumina): adicione 3 potes ao carrinho e o 3º sai de graça. 20g de proteína por dose e zero adição de açúcares.</p>
     </div>
-    <a class="exx-ult-tr-btn" href="https://exxnutrition.com.br/produtos/ultra-protein-whey-420g-exx-nutrition-1tw3l/">Adquira agora</a>
-    <p class="exx-ult-tr-nota">Promoção válida só hoje, 18/11. Adicione 3 potes de Ultra Protein 420g ao carrinho e o 3º sai grátis.</p>
+    <ol class="exx-ut-tr-track">
+      <li class="exx-ut-tr-step">
+        <span class="exx-ut-tr-num">Você leva</span>
+        <span class="exx-ut-tr-big">3</span>
+        <span class="exx-ut-tr-qty">potes de Ultra 420g</span>
+      </li>
+      <li class="exx-ut-tr-step exx-ut-tr-step--top">
+        <span class="exx-ut-tr-num">Você paga</span>
+        <span class="exx-ut-tr-big">2</span>
+        <span class="exx-ut-tr-qty">o 3º é grátis</span>
+      </li>
+    </ol>
+    <div class="exx-ut-tr-foot">
+      <div class="exx-ut-tr-sabores">
+        <span class="exx-ut-tr-sabor">Morango</span>
+        <span class="exx-ut-tr-sabor">Leite em Pó</span>
+        <span class="exx-ut-tr-sabor">Chocolate</span>
+      </div>
+      <p class="exx-ut-tr-note"><b>Só hoje, 18/11.</b> Monte com os sabores que quiser e leve 3 pagando 2.</p>
+      <a class="exx-ut-tr-cta" href="https://exxnutrition.com.br/produtos/ultra-protein-whey-420g-exx-nutrition-1tw3l/">Adquira agora</a>
+    </div>
   </div>
 </section>
-<style>
-  #exx-ultra-trilha.exx-ult-tr{ background:#0a0a0a; color:#fff; padding:48px 20px; margin-top:-20px; text-align:center; font-family:inherit; border-top:3px solid #e10600; border-bottom:3px solid #e10600; }
-  #exx-ultra-trilha .exx-ult-tr-wrap{ max-width:900px; margin:0 auto; }
-  #exx-ultra-trilha .exx-ult-tr-selo{ display:inline-block; background:#e10600; color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; padding:6px 14px; border-radius:999px; }
-  #exx-ultra-trilha .exx-ult-tr-h2{ font-size:clamp(26px,4vw,40px); font-weight:900; line-height:1.08; margin:16px 0 10px; text-transform:uppercase; }
-  #exx-ultra-trilha .exx-ult-tr-sub{ font-size:16px; color:#dcdcdc; margin:0 auto 20px; max-width:640px; line-height:1.5; font-weight:400; }
-  #exx-ultra-trilha .exx-ult-tr-sub b{ color:#fff; }
-  #exx-ultra-trilha .exx-ult-tr-sabores{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
-  #exx-ultra-trilha .exx-ult-tr-sabor{ border:1.5px solid #e10600; color:#fff; font-weight:700; font-size:14px; padding:8px 18px; border-radius:10px; }
-  #exx-ultra-trilha .exx-ult-tr-btn{ display:inline-block; background:#e10600; color:#fff; font-weight:900; text-transform:uppercase; letter-spacing:.04em; font-size:17px; text-decoration:none; padding:16px 44px; border-radius:12px; }
-  #exx-ultra-trilha .exx-ult-tr-btn:hover{ background:#ff1f1f; }
-  #exx-ultra-trilha .exx-ult-tr-nota{ font-size:12.5px; color:#9a9a9a; margin:18px auto 0; max-width:560px; line-height:1.5; }
-  @media(max-width:600px){ #exx-ultra-trilha.exx-ult-tr{ padding:36px 16px; } }
-</style>
-<script>
-(function(){
-  var sec=document.getElementById('exx-ultra-trilha');
-  if(!sec) return;
-  var START=new Date('2026-11-18T00:00:00-03:00').getTime();
-  var END  =new Date('2026-11-19T00:00:00-03:00').getTime();
-  var force=/[?&]ultra1811test=1\b/.test(location.search);
-  function upd(){
-    var now=Date.now();
-    var visible = force ? (now<END) : (now>=START && now<END);
-    if(visible){ sec.removeAttribute('hidden'); } else { sec.setAttribute('hidden',''); }
-  }
-  upd(); setInterval(upd,30000);
-})();
+<script id="exx-ut-tr-js">
+(function(){try{
+  var INICIO = '2026-11-18T00:00:00-03:00';
+  var FIM    = '2026-11-19T00:00:00-03:00';
+  var force = /[?&]ultra1811test=1\b/.test(location.search);
+  var ini = new Date(INICIO).getTime(), fim = new Date(FIM).getTime();
+  if (isNaN(ini) || isNaN(fim)) return;
+  var agora = Date.now();
+  if (!force && (agora < ini || agora >= fim)) return;
+  var sec = document.getElementById('exx-ultra-trilha');
+  if (!sec) return;
+  sec.removeAttribute('hidden');
+  if (!force) setTimeout(function(){ try { sec.setAttribute('hidden', ''); } catch (e) {} }, Math.min(fim - agora, 2147000000));
+}catch(e){}})();
 </script>
